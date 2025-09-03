@@ -1,13 +1,13 @@
 body {
     font-family: "Verdana";
-    background: hsla(188, 86%, 83%, 0.86);
+    background: black;
     margin: 0px;
     overflow: hidden;
     white-space: nowrap;
 }
 
 #page-area-container {
-    background: #7cd5e2;
+    background: blue;
     margin: 0px auto;
     width: 60%;
     height: 100%;
@@ -28,7 +28,7 @@ body {
 .title {
     padding-bottom: 6.5%;
     height:0px;
-    background: lightgrey;
+    background: white;
     margin: 0 auto;
     text-align: center;
     font-size: 40px;
@@ -40,7 +40,7 @@ body {
 
 #stats {
     position: absolute;
-    background: lightblue;
+    background: white;
     top: 15%;
     left: 65%;
     width: 30%;
@@ -122,4 +122,5 @@ select {
     outline: none;
 
 }
+
 
