@@ -1,5 +1,5 @@
 body {
-    font-family: "Ubuntu";
+    font-family: "Verdana";
     background: hsla(188, 86%, 83%, 0.86);
     margin: 0px;
     overflow: hidden;
@@ -7,7 +7,7 @@ body {
 }
 
 #page-area-container {
-    background: #000000;
+    background: #7cd5e2;
     margin: 0px auto;
     width: 60%;
     height: 100%;
@@ -122,3 +122,4 @@ select {
     outline: none;
 
 }
+
