@@ -1,5 +1,5 @@
 body {
-    font-family: "Verdana";
+    font-family: "Ubuntu";
     background: hsla(188, 86%, 83%, 0.86);
     margin: 0px;
     overflow: hidden;
@@ -7,7 +7,7 @@ body {
 }
 
 #page-area-container {
-    background: #7cd5e2;
+    background: #000000;
     margin: 0px auto;
     width: 60%;
     height: 100%;
@@ -120,4 +120,5 @@ select {
 
 #keybinds-submit:focus, #keybinds-entry:focus {
     outline: none;
+
 }
