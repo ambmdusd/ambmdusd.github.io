@@ -1537,7 +1537,7 @@ class Game {
     static getDefaultSettings() {
         var settings = {
             das: 125, //
-            arr: Math.floor(1000/60),
+            arr: 0,
             gravityDelay: 1000,
             maxMoves: 20,
             softDropSpeed: 25,
@@ -1547,20 +1547,14 @@ class Game {
             boolShadowPiece: true,
             numNextPieces: 5,
             keyCodes: {
-                39: "right",
-                37: "left",
-                38: "cw",
-                90: "ccw",
-                40: "sd",
-                32: "hd",
-                67: "hold",
-                16: "hold",
-                87: "hold",
-                69: "ccw",
-                82: "cw",
-                74: "left",
-                75: "sd",
                 76: "right",
+                74: "left",
+                70: "cw",
+                83: "ccw",
+                186: "sd",
+                75: "hd",
+                68: "180"
+                65: "hold"
             },
             loadFile: [],
             optionsBarVisible: true,
@@ -2369,3 +2363,4 @@ class Piece {
         return newArr;
     }
 }
+
