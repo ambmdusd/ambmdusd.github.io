@@ -1,0 +1,111 @@
+<!-- TODO: add rest of stats to stats options, add scroll to overflowing dropdown menu, add vertical constraint so board doesn't go off bottom of page --><html><head>
+<meta charset="utf-8">
+    <title>Tetresse</title>
+    <script src="js/game.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basic%20page.css">
+</head>
+<body onload="setup();">
+    <div id="page-area-container">
+        <div id="page-area">
+            <div class="title">Tetresse - Practice Tool</div>
+            <div id="play-area">
+                <div class="game"></div>
+            </div>
+            <table id="stats">
+                <tbody><tr>
+                    <td>Game Time</td>
+                    <td style="text-align: right;"><div class="game-0-time" style="display:inline;"></div></td>
+                </tr>
+                <tr>
+                    <td>Finesse Score</td>
+                    <td style="text-align: right;"><div class="game-0-finesse-errors" style="display: inline;"></div></td>
+                </tr>
+                <tr>
+                    <td>Finesse Tips</td>
+                    <td style="text-align: right;"><div class="game-0-finesse-errors-p" style="display: inline;"></div></td>
+                </tr>
+                <tr>
+                    <td>Lines Cleared</td>
+                    <td style="text-align: right;"><div class="game-0-lines-cleared" style="display: inline;"></div></td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function toggleButton(e) {
+            var eles = document.getElementsByClassName("game-0-" + e.id);
+            if (e.parentNode.id.indexOf("stats-selection") != -1) {
+                e = e.selectedOptions[0];
+                document.getElementById("stats-selection").selectedIndex = 0;
+                // TODO hide menu
+                if (eles.length != 0) {
+                    for (var i = 0; i < eles.length; i++) {
+                        eles[i].parentNode.parentNode.remove();
+                    }
+                    return;
+                    // TODO remove stats from list
+                }
+                // TODO make list stay until toggleSettingsSelections is clicked again(add multiple stats at once)
+                var table = document.getElementById("stats");
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = e.innerHTML.replace(/(?:^(?: )+)|(?:(?: )+$)/g, '');
+                var newEle = document.createElement("div");
+                newEle.style.textAlign = "right";
+                newEle.classList.add("game-0-" + e.id);
+                cell2.appendChild(newEle);
+                games[0].stats.reload();
+            } else if (e.parentNode.id.indexOf("keybinds-area") != -1) {
+                var entry = document.getElementById("keybinds-entry");
+                entry.style.display = "block";
+                entry.focus();
+                entry.innerHTML = "-"
+                var submit = document.getElementById("keybinds-submit")
+                submit.style.display = "block";
+            }
+        }
+
+        function recordKeyCode(element) {
+            element.style.background = "#e3aeae";
+            element.innerHTML = "-";
+            document.getElementById("keybinds-submit").style.background = "#c4c4c4";
+            var setKey = function(e) {
+                e = e || window.event;    
+                var ele = document.getElementById("keybinds-entry");
+                if (e != null) {
+                    ele.innerHTML = e.keyCode + "";
+                    ele.style.background = "#dadada";
+                    var submit = document.getElementById("keybinds-submit")
+                    submit.focus();
+                    submit.style.background = "#e3aeae";
+                    document.removeEventListener("keydown", setKey);
+                } else {
+                    ele.innerHTML = "-";
+                    ele.style.background = "#e3aeae";
+                }
+            }
+            addEvent(document, "keydown", setKey);
+        }
+
+        function submitKey(e) {
+            var entry = document.getElementById("keybinds-entry");
+            var submit = document.getElementById("keybinds-submit");
+            var selected = document.getElementById("keybinds-selection");
+            if (entry.innerHTML == "-") {
+                submit.style.background = "#c4c4c4";
+                recordKeyCode(entry);
+            }
+            selected.selectedIndex = 0;
+            entry.style.display = "none";
+            submit.style.display = "none";
+            console.log("Added keyCode " + entry.innerHTML + " to action " + selected.value)
+            games[0].settings.addKeyCode(selected.value, entry.innerHTML);
+        }
+
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975d3030ed109f60',t:'MTc1NjMxNDY4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
