@@ -13,7 +13,7 @@ body {
 
 .game-container {
     position: relative;
-    width: 100%;
+    width: 75%;
     padding-top: 100%;
 }
 
@@ -553,3 +553,4 @@ div .shadow {
     width: 100%;
 
 }
+
