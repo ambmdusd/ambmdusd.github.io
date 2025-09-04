@@ -24,19 +24,6 @@ body {
     position: relative;
 }
 
-.title {
-    padding-bottom: 6.5%;
-    color: white;
-    height:0px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 40px;
-    font-size: 3.5vw;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
 #stats {
     position: absolute;
     background: black;
@@ -126,6 +113,7 @@ select {
     outline: none;
 
 }
+
 
 
 
