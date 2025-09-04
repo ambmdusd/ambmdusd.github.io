@@ -1,5 +1,5 @@
 body {
-    font-family: "Verdana";
+    font-family: "Courier New";
     background: black;
     margin: 0px;
     overflow: hidden;
@@ -48,6 +48,7 @@ body {
     white-space: nowrap;
     font-size: 1vw;
     border-spacing: 0px;
+    border-radius: 10px;
 }
 
 td {
@@ -122,5 +123,6 @@ select {
     outline: none;
 
 }
+
 
 
