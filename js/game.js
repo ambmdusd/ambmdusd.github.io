@@ -1560,7 +1560,7 @@ class Game {
             optionsBarVisible: true,
             playable: true,
             showFinesseErrors: false,
-            redoFinesseErrors: true,
+            redoFinesseErrors: false,
             addKeyCode: function(key, number) {
                 this.keyCodes[number] = key;
                 setCookie("settings", JSON.stringify(this), 1000);
@@ -2363,4 +2363,5 @@ class Piece {
         return newArr;
     }
 }
+
 
