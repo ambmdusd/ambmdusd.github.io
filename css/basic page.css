@@ -39,7 +39,8 @@ body {
 
 #stats {
     position: absolute;
-    background: black
+    background: black;
+    color: white;
     top: 15%;
     left: 65%;
     width: 30%;
@@ -125,6 +126,7 @@ select {
     outline: none;
 
 }
+
 
 
 
