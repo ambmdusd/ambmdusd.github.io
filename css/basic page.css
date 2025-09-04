@@ -27,8 +27,8 @@ body {
 
 .title {
     padding-bottom: 6.5%;
+    color: white;
     height:0px;
-    background: white;
     margin: 0 auto;
     text-align: center;
     font-size: 40px;
@@ -123,6 +123,7 @@ select {
     outline: none;
 
 }
+
 
 
 
