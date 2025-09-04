@@ -20,6 +20,7 @@ body {
 
 #play-area {
     width: 36%;
+    height: 27%;
     position: relative;
     border-spacing: 0px;
     border-radius: 10px;
@@ -117,9 +118,3 @@ select {
     outline: none;
 
 }
-
-
-
-
-
-
