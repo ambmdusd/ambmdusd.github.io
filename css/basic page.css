@@ -20,7 +20,13 @@ body {
 
 #play-area {
     width: 60%;
+    left: 50%;
     position: relative;
+    border-spacing: 0px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 #stats {
@@ -37,7 +43,7 @@ body {
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    border-color: white
+    border-color: white;
 }
 
 td {
@@ -112,6 +118,7 @@ select {
     outline: none;
 
 }
+
 
 
 
