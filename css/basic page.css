@@ -7,7 +7,6 @@ body {
 }
 
 #page-area-container {
-    background: blue;
     margin: 0px auto;
     width: 60%;
     height: 100%;
@@ -126,6 +125,7 @@ select {
     outline: none;
 
 }
+
 
 
 
