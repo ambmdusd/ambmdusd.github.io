@@ -19,8 +19,6 @@ body {
 }
 
 #play-area {
-    width: 60%;
-    text-align: center;
     position: relative;
     border-spacing: 0px;
     border-radius: 10px;
@@ -34,7 +32,6 @@ body {
     position: absolute;
     background: black;
     color: white;
-    top: 15%;
     left: 80%;
     width: 30%;
     padding: 1%;
@@ -119,13 +116,6 @@ select {
     outline: none;
 
 }
-
-
-
-
-
-
-
 
 
 
