@@ -40,7 +40,7 @@ body {
 
 #stats {
     position: absolute;
-    background: white;
+    background: black
     top: 15%;
     left: 65%;
     width: 30%;
@@ -49,6 +49,9 @@ body {
     font-size: 1vw;
     border-spacing: 0px;
     border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white
 }
 
 td {
@@ -123,6 +126,7 @@ select {
     outline: none;
 
 }
+
 
 
 
