@@ -20,7 +20,6 @@ body {
 
 #play-area {
     width: 60%;
-    left: 15%;
     position: relative;
 }
 
@@ -29,7 +28,7 @@ body {
     background: black;
     color: white;
     top: 15%;
-    left: 65%;
+    left: 80%;
     width: 30%;
     padding: 1%;
     white-space: nowrap;
@@ -113,6 +112,7 @@ select {
     outline: none;
 
 }
+
 
 
 
