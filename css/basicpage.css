@@ -1,5 +1,5 @@
 body {
-    font-family: "Courier New";
+    font-family: monospace;
     background: black;
     margin: 0px;
     overflow: hidden;
@@ -118,4 +118,5 @@ select {
     outline: none;
 
 }
+
 
