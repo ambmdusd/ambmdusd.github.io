@@ -1,6 +1,6 @@
 body {
     font-family: monospace;
-    background: black;
+    background: red;
     margin: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -118,5 +118,6 @@ select {
     outline: none;
 
 }
+
 
 
