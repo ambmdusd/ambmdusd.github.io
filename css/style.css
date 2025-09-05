@@ -12,18 +12,15 @@ body {
 
 
 .game-container {
-    position: relative;
-    width: 75%;
-    padding-top: 100%;
+    aspect-ratio: .75;
 }
 
 .loaded-game {
-    background: black;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 60%;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
     display: inline-block;
     user-select: none;
 }
@@ -553,6 +550,3 @@ div .shadow {
     width: 100%;
 
 }
-
-
-
